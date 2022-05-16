@@ -1,11 +1,20 @@
 html {
+  text-align: center;
   font-size: 14px;
+  background-color: rgb(233, 233, 233);
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1080px) {
   html {
+    text-align: center;
     font-size: 16px;
+    
   }
+}
+
+h1 {
+  font-size: 36px;
+  margin-top: -6px;
 }
 
 html {
@@ -14,7 +23,27 @@ html {
 }
 
 #resulthl {
+  text-align: center;
   margin-top: 10px;
+}
+
+.FreshInput {
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 4px;
+  border-bottom-color: lightgray;
+  font-size: 16px;
+  text-align: center;
+}
+
+.FreshInput:focus {
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 4px;
+  border-bottom-color: lightblue;
+  outline: none;
 }
 
 body {
@@ -24,6 +53,16 @@ body {
 @keyframes example {
   0% {top: 0px; opacity: 0%; margin: 0px;}
   100% {top: 30px; opacity: 100%; margin: 20px;}
+}
+
+@keyframes example2 {
+  0% {background-color: rgb(128, 128, 255); width: 100px;}
+  100% {background-color: rgb(214, 214, 253); width: 150px;}
+}
+
+@keyframes example3 {
+  0% {background-color: rgb(214, 214, 253); width: 150px;}
+  100% {background-color: rgb(128, 128, 255); width: 100px;}
 }
 
 img {
@@ -38,6 +77,7 @@ img {
 h1 {
   background-color: lightblue;
   color: white;
+  text-align: center;
 }
 
 .FreshInput {
@@ -52,7 +92,23 @@ button {
   color: white;
   height: 40px;
   background-color: rgb(128, 128, 255);
+  width: 100px;
 }
+
+button:hover {
+  animation-name: example2;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-fill-mode: forwards;
+}
+
+button::after {
+  animation-name: example3;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-fill-mode: forwards;
+}
+
 
 img {
   border-radius: 15px;
